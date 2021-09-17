@@ -1,0 +1,62 @@
+type Query {
+  me: String!
+  specifications: [Specification!]
+  features: [Feature!]
+}
+
+type Mutation {
+  updateSpecification(id: ID!, values: CreateSpecification): Specification
+  updateFeature(id: ID!, values: createFeature): Feature
+}
+
+type Specification {
+  id: ID!
+  mileage: Float
+  fuelType: String!
+  engineDisplacement: Int
+  maxPower: String
+  maxTorque: String
+  seatingCapacity: Int
+  transmissionType: String
+  bootspace: Int
+  fuelTankCapacity: Float!
+  bodyType: String
+}
+
+type Feature {
+  id: ID!
+  powerSteering: Boolean
+  PowerWindowsFront: Boolean
+  abs: Boolean
+  ac: Boolean
+  driverAirbag: Boolean
+  passangerAirbag: Boolean
+  autoClimateCrontol: Boolean
+  alloyWheels: Boolean
+  mfSteering: Boolean
+}
+
+input createFeature {
+  powerSteering: Boolean
+  PowerWindowsFront: Boolean
+  abs: Boolean
+  ac: Boolean
+  driverAirbag: Boolean
+  passangerAirbag: Boolean
+  autoClimateCrontol: Boolean
+  alloyWheels: Boolean
+  mfSteering: Boolean
+}
+
+input CreateSpecification {
+  mileage: Float
+  fuelType: String!
+  engineDisplacement: Int
+  maxPower: String
+  maxTorque: String
+  seatingCapacity: Int
+  transmissionType: String
+  bootspace: Int
+  fuelTankCapacity: Float!
+  bodyType: String
+}
