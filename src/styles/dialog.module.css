@@ -1,0 +1,46 @@
+.backdrop {
+  position: absolute;
+  height: 130%;
+  width: 100vw;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
+}
+
+.dialogbox {
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  z-index: 15;
+  min-height: 15vh;
+  min-width: 20vw;
+  background-color: cornsilk;
+  padding: 8px;
+  padding-bottom: 16px;
+}
+
+.DialogHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.DialogHeading > div > p {
+  border: none;
+  color: DodgerBlue;
+  padding: 6px 8px;
+  font-weight: bolder;
+}
+
+.btn {
+  border: none;
+  color: DodgerBlue;
+  padding: 6px 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  color: RoyalBlue;
+}
